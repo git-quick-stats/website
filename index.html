@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Git quick statistics is a simple and efficient way to access various statistics in git repository.</title>
+    <meta name="description"
+        content="▁▅▆▃▅ Any git repository may contain tons of information about commits, contributors, and files. Extracting this information is not always trivial, mostly because there are a gadzillion options to a gadzillion git commands – I don’t think there is a single person alive who knows them all. Probably not even Linus Torvalds himself :).">
+    <meta name="keywords" content="git, repository, github, statistics, linux, docker, windows">
+    <link href="assets/base.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+    <link rel="shortcut icon" href="assets/icon.svg" type="image/x-icon">
+    <script defer data-domain="git-quick-stats.sh" src="https://beacon.static-data.com/js/script.js"></script>
+</head>
+
+<body>
+    <div id="wrap" class="container">
+        <header class="header">
+            <div class="row">
+                <div class="logo six columns">
+                    <a href="https://git-quick-stats.sh/"><img width="40%" src="assets/logo.svg"
+                            alt="git-quick-stats logo"></a>
+                </div>
+                <nav class="six columns">
+                    <a href="#getting-started" class="github">Getting started</a>
+                    <a href="#docs" class="github">Docs</a>
+                    <a href="https://github.com/arzzen/git-quick-stats" class="github">GitHub
+                        <img alt="github" src="assets/GitHub-Mark.png"></a>
+                </nav>
+            </div>
+        </header>
+        <section class="splash center">
+            <h1>
+                <span><u>Simple way</u> to access various <br>statistics in <u>git</u> repository. </span>
+            </h1>
+            <br>
+            <div class="center">
+                <p class="download">
+                    <strong>Installation</strong>
+                    <a href="https://github.com/arzzen/git-quick-stats#windows">Windows</a>
+                    <a href="https://github.com/arzzen/git-quick-stats#unix-and-linux">Linux</a>
+                    <a href="https://github.com/arzzen/git-quick-stats#macos-homebrew">macOS</a>
+                    <a href="https://github.com/arzzen/git-quick-stats#docker">Docker</a>
+                </p>
+
+                <p>
+                    <em>or you can install directly:</em>
+                    <br>
+                    <code>
+                           bash <(curl -s https://git-quick-stats.sh/install)
+                        </code>
+                </p>
+            </div>
+
+            <div class="center">
+                <img src="https://user-images.githubusercontent.com/8818630/154823670-f42a111b-45f4-47fc-aea7-80059827c8e6.png"
+                    alt="git quick stats">
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="center">
+                <span>Features</span>
+            </h2>
+            <div class="row">
+                <div class="four columns">
+                    <h3>Multiplatform</h3>
+                    Works on Windows, Linux and macOS (or you can use the Docker image).
+                </div>
+                <div class="four columns">
+                    <h3>Contribution stats</h3>
+                    List of everyone who contributed to the repository.
+                </div>
+                <div class="four columns">
+                    <h3>Code reviewers</h3>
+                    Find the best people to contact to review code.
+                </div>
+            </div>
+            <div class="row">
+                <div class="four columns">
+                    <h3>Git changelogs</h3>
+                    Easy to fetch git changelogs.
+                </div>
+                <div class="four columns">
+                    <h3>Dependency</h3>
+                    You can run on every OS with a Bash shell.
+                </div>
+                <div class="four columns">
+                    <h3>Open source</h3>
+                    Git-quick-stats is free, open source software licensed under MIT.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="center">
+                <span>More screenshots</span>
+            </h2>
+            <div class="row">
+                <div class="">
+                    <img src="https://user-images.githubusercontent.com/8818630/154823677-e34ca867-ae61-4755-bf89-c877f809c591.png"
+                        alt="git commits by weekday">
+                </div>
+                <div class="">
+                    <img src="https://user-images.githubusercontent.com/8818630/154823679-bdadc26c-c644-4a01-b625-85e330f85d41.png"
+                        alt="git commits by hour">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="center" id="getting-started">Getting started</h2>
+            <ul>
+                <li>
+                    <strong>Installation</strong>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/arzzen/git-quick-stats#windows">Windows</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/arzzen/git-quick-stats#unix-and-linux">Linux</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/arzzen/git-quick-stats#macos-homebrew">macOS</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/arzzen/git-quick-stats#docker">Docker</a>
+                        </li>
+                    </ul>
+                    <br>
+                </li>
+                <li><strong>Interactive usage</strong>
+                    <ul>
+                        <li>
+                            git-quick-stats has a built-in interactive menu that can be executed as such:
+                            <br>
+                            <code>git-quick-stats</code>
+                            <br>
+                            Or
+                            <br>
+                            <code>git quick-stats</code>
+                        </li>
+                    </ul>
+                </li><br>
+                <li><strong>Non-interactive usage</strong>
+                    <ul>
+                        <li>
+                            For those who prefer to utilize command-line options, git-quick-stats also has a
+                            non-interactive mode supporting both short and long options:
+                            <br>
+                            <code>git-quick-stats [optional-command-to-execute-directly]</code>
+                            <br>
+                            Or
+                            <br>
+                            <code>git quick-stats [optional-command-to-execute-directly]</code>
+                        </li>
+                        <li>
+                            Command-line arguments:
+                            <br>
+                            <code>-r, --suggest-reviewers</code>
+                            show the best people to contact to review code<br>
+                            <code>-T, --detailed-git-stats</code>
+                            - give a detailed list of git stats<br>
+                            <code>-R, --git-stats-by-branch</code>
+                            see detailed list of git stats by branch<br>
+                            <code>-d, --commits-per-day</code>
+                            displays a list of commits per day<br>
+                            <code>-m, --commits-by-month</code>
+                            displays a list of commits per month<br>
+                            <code>-w, --commits-by-weekday</code>
+                            displays a list of commits per weekday<br>
+                            <code>-o, --commits-by-hour</code>
+                            displays a list of commits per hour<br>
+                            <code>-A, --commits-by-author-by-hour</code>
+                            displays a list of commits per hour by author<br>
+                            <code>-a, --commits-per-author</code>
+                            displays a list of commits per author<br>
+                            <code>-S, --my-daily-stats</code>
+                            see your current daily stats<br>
+                            <code>-C, --contributors</code>
+                            see a list of everyone who contributed to the repo<br>
+                            <code>-b, --branch-tree</code>
+                            show an ASCII graph of the git repo branch history<br>
+                            <code>-D, --branches-by-date</code>
+                            show branches by date<br>
+                            <code>-c, --changelogs</code>
+                            see changelogs<br>
+                            <code>-L, --changelogs-by-author</code>
+                            see changelogs by author<br>
+                            <code>-j, --json-output</code>
+                            save git log as a JSON formatted file to a specified area<br>
+                            <code>-h, -?, --help</code>
+                            display this help text in the terminal<br>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="center" id="docs">
+                <span>Documentation</span>
+            </h2>
+            <div>
+                <ul>
+                    <li><strong>Git log since and until</strong>
+                        <p>
+                            You can set the variables _GIT_SINCE and/or _GIT_UNTIL before running git-quick-stats to
+                            limit the git log. <br>
+                            These work similar to git's built-in --since and --until log options.
+                        </p>
+                        <code>
+                                export _GIT_SINCE="2017-01-20"<br>
+                                export _GIT_UNTIL="2017-01-22"
+                            </code>
+                        <p>
+                            Once set, run git quick-stats as normal. Note that this affects all stats that parse the git
+                            log history until unset.
+                        </p>
+                    </li>
+                    <li><strong>Git log limit</strong>
+                        <p>
+                            You can set variable _GIT_LIMIT for limited output. It will affect the "changelogs" and
+                            "branch tree" options.
+                        </p>
+                        <p>
+                            <code>
+                                    export _GIT_LIMIT=20
+                                </code>
+                        </p>
+                    </li>
+                    <li><strong>Git pathspec</strong>
+                        <p>
+                            You can exclude a directory from the stats by using pathspec
+                        </p>
+                        <code>
+                                export _GIT_PATHSPEC=':!directory'
+                            </code>
+                        <p>
+                            You can also exclude files from the stats. Note that it works with any alphanumeric, glob,
+                            or regex that git respects.
+                        </p>
+                        <p>
+                            <code>
+                                    export _GIT_PATHSPEC=':!package-lock.json'
+                                </code>
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Git merge view strategy</strong>
+                        <p>
+                            You can set the variable _GIT_MERGE_VIEW to enable merge commits to be part of the stats by
+                            setting _GIT_MERGE_VIEW to enable. You can also choose to only show merge commits by setting
+                            _GIT_MERGE_VIEW to exclusive. Default is to not show merge commits. These work similar to
+                            git's built-in --merges and --no-merges log options.
+                        </p>
+                        <p>
+                            <code>
+                                    export _GIT_MERGE_VIEW="enable"<br>
+                                    export _GIT_MERGE_VIEW="exclusive"
+                                </code>
+                        </p>
+                    </li>
+                    <li><strong>Color themes</strong>
+                        <p>
+                            You can change to the legacy color scheme by toggling the variable _MENU_THEME between
+                            default and legacy
+                        </p>
+                        <p>
+                            <code>
+                                    export _MENU_THEME=legacy
+                                </code>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="footer">
+            © 2017-2024. All rights reserved
+        </footer>
+    </div>
+</body>
+
+</html>
